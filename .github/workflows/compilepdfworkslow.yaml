@@ -19,7 +19,7 @@ jobs:
           
       - name: Build LaTeX
         run: |
-          for project in $(ls *.tex); do
+          for project in $(ls resume*.tex); do
               latexmk -synctex=1 -interaction=nonstopmode -file-line-error -pdf "${PWD}/${project}" -outdir=$PWD 
           done
           
